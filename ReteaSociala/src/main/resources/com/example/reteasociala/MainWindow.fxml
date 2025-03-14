@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="456.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reteasociala.MainWindowController">
+   <top>
+      <AnchorPane onMouseClicked="#setPaneCautareVisible" prefHeight="44.0" prefWidth="600.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="454.0" prefHeight="45.0" prefWidth="139.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="buttonSentRequests" mnemonicParsing="false" onAction="#buttonSent" style="-fx-background-radius: 25;     -fx-border-radius: 25;     -fx-background-color: #4CAF50;     -fx-border-color: #2C6B1F;     -fx-border-width: 3;     -fx-pref-width: 100px;     -fx-pref-height: 100px;     -fx-alignment: center;     -fx-padding: 0; -fx-background-image: url(user-sent.png); -fx-background-position: center center; -fx-background-size: 25px 25px; -fx-background-repeat: no-repeat;" />
+                  <Button fx:id="buttonReceivedRequests" mnemonicParsing="false" onAction="#buttonReceived" prefHeight="46.0" prefWidth="64.0" style="-fx-background-radius: 25;     -fx-border-radius: 25;     -fx-background-color: #4CAF50;     -fx-border-color: #2C6B1F;     -fx-border-width: 3;     -fx-pref-width: 100px;     -fx-pref-height: 100px;     -fx-alignment: center;     -fx-padding: 0; -fx-background-image: url(user-recv.png); -fx-background-position: center center; -fx-background-size: 25px 25px; -fx-background-repeat: no-repeat;" />
+                  <Button fx:id="buttonFriends" mnemonicParsing="false" onAction="#buttonFriends" prefHeight="44.0" prefWidth="130.0" style="-fx-background-radius: 25;     -fx-border-radius: 25;     -fx-background-color: #4CAF50;     -fx-border-color: #2C6B1F;     -fx-border-width: 3;     -fx-pref-width: 100px;     -fx-pref-height: 100px;     -fx-alignment: center;     -fx-padding: 0; -fx-background-image: url(users.png); -fx-background-position: center center; -fx-background-size: 25px 25px; -fx-background-repeat: no-repeat;" />
+               </children>
+            </HBox>
+            <Label fx:id="labelUsername" layoutX="52.0" layoutY="13.0" prefHeight="18.0" prefWidth="441.0" />
+            <Button fx:id="buttonPfp" mnemonicParsing="false" onAction="#searchCurrentUser" style="-fx-background-radius: 50%;     -fx-border-radius: 50%;     -fx-background-color: #4CAF50; -fx-pref-width: 46.4px;     -fx-pref-height: 45.6px;     -fx-alignment: center;     -fx-padding: 0; -fx-background-position: center center; -fx-background-size: cover; -fx-background-repeat: no-repeat;" />
+         </children></AnchorPane>
+   </top>
+   <right>
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="412.0" prefWidth="178.0" style="-fx-background-color: #8DA750;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="vBoxDreapta" prefHeight="200.0" prefWidth="98.0" style="-fx-background-color: #8DA750;">
+            </VBox>
+         </content>
+      </ScrollPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="422.0" prefWidth="439.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="paneMesaje" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <bottom>
+                  <AnchorPane prefHeight="88.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="textMesaj" layoutY="6.0" prefHeight="26.0" prefWidth="396.0" AnchorPane.bottomAnchor="3.6000000000000014" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="37.60000000000002" />
+                        <Button layoutX="396.0" layoutY="6.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="26.0" prefWidth="28.0" text="&gt;" AnchorPane.bottomAnchor="3.6000000000000014" AnchorPane.rightAnchor="9.600000000000023" />
+                        <TextField fx:id="textReplyId" layoutX="166.0" layoutY="31.0" />
+                        <Label layoutY="35.0" text="Raspunde la mesaj cu id-ul" />
+                     </children>
+                  </AnchorPane>
+               </bottom>
+               <center>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox fx:id="vBoxMesaje" prefHeight="200.0" prefWidth="100.0" />
+                     </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+            <AnchorPane fx:id="paneCautare" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8DA750;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TextField fx:id="textSearch" layoutX="28.0" layoutY="53.0" prefHeight="26.0" prefWidth="377.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="52.99999999999998" />
+                  <Button layoutX="191.0" layoutY="109.0" mnemonicParsing="false" onAction="#searchUsername" text="Search" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="190.60000000000002" />
+                  <Button fx:id="buttonRezultat" layoutX="27.0" layoutY="229.0" mnemonicParsing="false" onAction="#functieButonRezultat" prefHeight="26.0" prefWidth="380.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="26.600000000000023" />
+                  <Button layoutX="240.0" layoutY="373.0" mnemonicParsing="false" onAction="#deleteMyAcoount" prefHeight="25.0" prefWidth="152.0" text="Delete my account" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

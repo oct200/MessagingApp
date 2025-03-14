@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="302.0" prefWidth="600.0" style="-fx-background-color: #8DA750;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reteasociala.SignInController">
+   <children>
+      <TextField fx:id="textUsername" layoutX="147.0" layoutY="41.0" prefHeight="31.0" prefWidth="307.0" style=" -fx-alignment: center; -fx-background-color: transparent;       -fx-border-color: transparent transparent #E4E998 transparent;       -fx-border-width: 0 0 2 0;       -fx-prompt-text-fill: #ffffff;       -fx-text-fill: white;       -fx-font-size: 14px;" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="146.0" />
+      <Label layoutX="147.0" layoutY="14.0" prefHeight="27.0" prefWidth="307.0" style="-fx-text-fill: #E4E998; -fx-alignment: center; -fx-font-size: 14px; -fx-font-family: Bradley Hand, cursive;   -fx-font-weight: bold;  -fx-label-padding: 5 0 5 0;" text="User name" textAlignment="CENTER" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="146.0" />
+      <Label layoutX="144.0" layoutY="92.0" prefHeight="31.0" prefWidth="319.0" style="-fx-text-fill: #E4E998; -fx-font-size: 14px; -fx-alignment: center; -fx-font-family: Bradley Hand, cursive; -fx-font-weight: bold;  -fx-label-padding: 5 0 5 0;" text="Password" textAlignment="CENTER" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="137.0" />
+      <Button layoutX="147.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleLogIn" prefHeight="50.0" prefWidth="138.0" style="       -fx-background-radius: 20;       -fx-padding: 10 20;       -fx-font-size: 14px;       -fx-background-color: #537B2F;       -fx-text-fill: #E4E998;       -fx-border-radius: 20;       -fx-border-width: 2;       -fx-border-color: #E4E998;" text="LOG IN" AnchorPane.bottomAnchor="52.599999999999994" AnchorPane.leftAnchor="147.0" />
+      <Button layoutX="325.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleNewUser" prefHeight="49.0" prefWidth="137.0" style="       -fx-background-radius: 20;       -fx-padding: 10 20;       -fx-font-size: 14px;       -fx-background-color: #537B2F;       -fx-text-fill: #E4E998;       -fx-border-radius: 20;       -fx-border-width: 2;       -fx-border-color: #E4E998;" text="SIGN UP" AnchorPane.bottomAnchor="53.400000000000006" AnchorPane.rightAnchor="137.39999999999998" />
+      <PasswordField fx:id="textPassword" layoutX="147.0" layoutY="124.0" prefHeight="31.0" prefWidth="307.0" style=" -fx-alignment: center; -fx-background-color: transparent;       -fx-border-color: transparent transparent #E4E998 transparent;       -fx-border-width: 0 0 2 0;       -fx-prompt-text-fill: #ffffff;       -fx-text-fill: white;       -fx-font-size: 14px;" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="146.0" />
+   </children>
+</AnchorPane>
