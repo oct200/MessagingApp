@@ -1,4 +1,4 @@
-Java application, made as an university project through the 3rd semestered, focused on solidifying my understanding of design patterns, such as the layered architecture pattern or the Observer/Observable pattern.
+Java application, made as an university project through the 3rd semester, focused on solidifying my understanding of design patterns, such as the layered architecture pattern or the Observer/Observable pattern.
 
 Main functionalities:
   - requesting, accepting, declining and deleting friendships for the account the user is logged into
